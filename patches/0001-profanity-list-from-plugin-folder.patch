@@ -1,0 +1,25 @@
+diff --git a/src/NpcBeastmaster.cpp b/src/NpcBeastmaster.cpp
+index 3808545..e954986 100644
+--- a/src/NpcBeastmaster.cpp
++++ b/src/NpcBeastmaster.cpp
+@@ -22,6 +22,7 @@
+ #include "Config.h"
+ #include "Pet.h"
+ #include "Player.h"
++#include "PluginMgr.h"
+ #include "ScriptMgr.h"
+ #include "ScriptedCreature.h"
+ #include "ScriptedGossip.h"
+@@ -170,7 +171,11 @@ static std::set<uint8> ParseAllowedClasses(const std::string &csv) {
+ }
+ 
+ static void LoadProfanityListIfNeeded() {
+-  const std::string path = "modules/mod-npc-beastmaster/conf/profanity.txt";
++  // Loaded as a plugin: the list is in the plugin's folder.
++  PluginInfo const *plugin = sPluginMgr->Find("mod-npc-beastmaster");
++  const std::string path =
++      plugin ? (plugin->dir / "conf" / "profanity.txt").string()
++             : "modules/mod-npc-beastmaster/conf/profanity.txt";
+   time_t mtime = GetFileMTime(path);
+   if (mtime == 0)
+     return;
