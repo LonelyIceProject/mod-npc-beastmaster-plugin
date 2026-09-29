@@ -1,3 +1,5 @@
+<p align="center"><img src="logo.png" width="128" alt="logo"></p>
+
 # mod-npc-beastmaster plugin
 
 Builds [azerothcore/mod-npc-beastmaster](https://github.com/azerothcore/mod-npc-beastmaster) as a plugin for
