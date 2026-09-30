@@ -1,0 +1,16 @@
+diff --git a/src/NpcBeastmaster.cpp b/src/NpcBeastmaster.cpp
+index e954986..4a87bcb 100644
+--- a/src/NpcBeastmaster.cpp
++++ b/src/NpcBeastmaster.cpp
+@@ -1140,9 +1140,9 @@ public:
+     std::string msg =
+         sConfigMgr->GetOption<std::string>("BeastMaster.LoginMessage", "");
+     if (!msg.empty())
+-      ch.PSendSysMessage("%s", msg.c_str());
++      ch.SendSysMessage(msg);
+     else
+-      ch.PSendSysMessage("|cff00ff00[Beastmaster]|r Use |cff00ffff.bm|r or "
++      ch.PSendSysMessage("|cff00ff00[Beastmaster]|r Use "
+                          "|cff00ffff.beastmaster|r to summon the Beastmaster "
+                          "NPC and manage your pets!");
+ 
