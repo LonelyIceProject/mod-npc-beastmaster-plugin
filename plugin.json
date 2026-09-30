@@ -1,7 +1,7 @@
 {
   "format": 1,
   "id": "mod-npc-beastmaster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": { "en": "Beastmaster", "ru": "Повелитель зверей" },
   "description": {
     "en": "An NPC that lets players tame and keep beasts as pets.",
@@ -10,6 +10,7 @@
   "authors": [ "AzerothCore" ],
   "license": "AGPL-3.0",
   "homepage": "https://github.com/azerothcore/mod-npc-beastmaster",
+  "locales": [ "en" ],
   "source": {
     "repo": "https://github.com/azerothcore/mod-npc-beastmaster.git",
     "commit": "99dbd9b73f63c39b0773c575bea7a8add8049ccf"
