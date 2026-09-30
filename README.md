@@ -13,11 +13,14 @@ An NPC that lets players tame and keep beasts as pets.
 | `plugin.json` | The plugin manifest; `source` pins the module's repository and commit. |
 | `CMakeLists.txt` | Fetches the module at that commit, applies `patches/`, builds it with `AddPlugin` and lays out its `conf` and `data` folders with the plugin. |
 | `plugin/plugin.cpp` | The plugin's entry point: the module's own script loader `Addmod_npc_beastmasterScripts()`. |
+| `settings.json` | The launcher's settings group: the module's main options from its `.conf.dist`, with how each one takes effect. |
 | `patches/` | Changes the module needs as a plugin, applied with `git apply`. |
 
 ## Patches
 
 - `0001-profanity-list-from-plugin-folder.patch`: reads `conf/profanity.txt` from the plugin's folder instead of `modules/mod-npc-beastmaster/conf`.
+- `0002-login-message-beastmaster-command.patch`: the login notice names only `.beastmaster` (there is no `.bm`
+  command), and a custom `BeastMaster.LoginMessage` is shown as written instead of as a literal `%s`.
 
 ## Build
 

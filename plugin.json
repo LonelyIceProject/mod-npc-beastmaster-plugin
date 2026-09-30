@@ -1,7 +1,7 @@
 {
   "format": 1,
   "id": "mod-npc-beastmaster",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": { "en": "Beastmaster", "ru": "Повелитель зверей" },
   "description": {
     "en": "An NPC that lets players tame and keep beasts as pets.",
@@ -19,5 +19,6 @@
   "platforms": [ "windows-x64" ],
   "server": { "library": "mod_npc_beastmaster" },
   "databases": { "characters": "data/sql/db-characters", "world": "data/sql/db-world" },
-  "config": "conf/mod_npc_beastmaster.conf.dist"
+  "config": "conf/mod_npc_beastmaster.conf.dist",
+  "settings": "settings.json"
 }
